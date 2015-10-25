@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\GameData\Actions\GetCandyAction.cs">
+    <Files>
+      <File FileName="Assets\Standard Assets\Scripts\GameData\Actions\GetCandyAction.cs" Line="46" Column="29" />
+      <File FileName="Assets\Standard Assets\Scripts\GameData\Labourers\CandyLabourer.cs" Line="116" Column="32" />
+      <File FileName="Assets\Standard Assets\Scripts\AI\GOAP\GoapAgent.cs" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Scripts\Component\CandyGiverComponent.cs" Line="6" Column="17" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
