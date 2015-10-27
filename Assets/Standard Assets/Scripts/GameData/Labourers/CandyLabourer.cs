@@ -27,22 +27,28 @@ public abstract  class CandyLabourer : MonoBehaviour, IGoap
 	void Start ()
 	{	seeker = GetComponent<Seeker>();
 		controller = GetComponent<CharacterController>();
+		backpack = GetComponent<CandyBag>();
 		if (backpack == null)
 			backpack = gameObject.AddComponent <CandyBag>( ) as CandyBag;
+	
 	}
 	
 	
 	public void Update () {
-		
+		if (backpack.Spanked){
+		this.gameObject.GetComponent<GetCandyAction>().doReset();
+			this.gameObject.GetComponent<DropOffCandyAction>().doReset();}
 	}
 	/**
 	 * Key-Value data that will feed the GOAP actions and system while planning.
 	 */
 	public HashSet<KeyValuePair<string,object>> getWorldState () {
 		HashSet<KeyValuePair<string,object>> worldData = new HashSet<KeyValuePair<string,object>> ();
-		
+	//	Debug.LogError("DOES THIS EVEN RUN");
+	//	Debug.LogError(backpack.Spanked);
 		worldData.Add(new KeyValuePair<string, object>("hasCandy", (backpack.numCandy > 0) ));
-
+		worldData.Add(new KeyValuePair<string, object>("inPunishment", (backpack.Spanked)));
+	
 		return worldData;
 	}
 	
@@ -80,8 +86,8 @@ public abstract  class CandyLabourer : MonoBehaviour, IGoap
 	}
 	
 	public bool moveAgent(GoapAction nextAction) {
-		if (path!=null){
-
+		if (path!=null && currentWaypoint<path.vectorPath.Count){
+//			Debug.Log(this.gameObject);//+" "+ path.vectorPath[currentWaypoint] );
 			gameObject.transform.LookAt( path.vectorPath[currentWaypoint]);
 			gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, path.vectorPath[currentWaypoint], moveSpeed*Time.deltaTime);
 			//Vector3 dir = (path.vectorPath[currentWaypoint]-transform.position).normalized;
@@ -103,10 +109,10 @@ public abstract  class CandyLabourer : MonoBehaviour, IGoap
 		//	float step = moveSpeed * Time.deltaTime;
 		//	gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, nextAction.target.transform.position, step);
 		//		Debug.Log ("target:"+nextAction.target.gameObject + " position: "+nextAction.target.transform.position+" and distant:" +Vector2.Distance(gameObject.transform.position, nextAction.target.transform.position));
-		Debug.Log(Vector2.Distance(gameObject.transform.position, nextAction.target.transform.position));
+		//Debug.Log(Vector2.Distance(gameObject.transform.position, nextAction.target.transform.position));
 		
-		if (Vector2.Distance(gameObject.transform.position, nextAction.target.transform.position) < 0.5f ) {
-			Debug.Log ("ARRIVED");
+		if (Vector2.Distance(gameObject.transform.position, nextAction.target.transform.position) < 1f ) {
+//			Debug.Log ("ARRIVED");
 			path=null;
 
 			currentWaypoint = 0;
@@ -135,7 +141,7 @@ public abstract  class CandyLabourer : MonoBehaviour, IGoap
 		if (!p.error) {
 			path = p;
 			imcalculatingthepathnigger =false;
-			//Reset the waypoint counter
+
 			currentWaypoint = 0;
 		}
 	}

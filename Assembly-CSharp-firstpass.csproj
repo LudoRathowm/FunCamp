@@ -56,6 +56,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\Component\CandyStash.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\ChopFirewoodAction.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\ChopTreeAction.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\ConfiscateCandy.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\DropOffCandyAction.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\DropOffFirewoodAction.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\DropOffLogsAction.cs" />
@@ -63,7 +64,9 @@
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\DropOffToolsAction.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\ForgeToolAction.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\GetCandyAction.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\GetSpanked.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\MineOreAction.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\Patrol.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\PickUpLogsAction.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\PickUpOreAction.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Actions\PickUpToolAction.cs" />
@@ -159,6 +162,7 @@
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Labourers\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Labourers\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Labourers\AstarPathfindingProject\changelog.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\GameData\Labourers\BibleThumper.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Labourers\Blacksmith.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Labourers\CandyCollector.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\GameData\Labourers\CandyLabourer.cs" />
@@ -184,17 +188,11 @@
      <None Include="Assets\Standard Assets\Scripts\GameData\Labourers\AstarPathfindingProject\Plugins\JsonFx\JsonFxLicense.txt" />
      <None Include="Assets\Standard Assets\Scripts\GameData\Labourers\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
      <None Include="Assets\Standard Assets\Scripts\GameData\Labourers\AstarPathfindingProject\link.xml" />
- <Reference Include="UnityEngine.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Pathfinding.Ionic.Zip.Reduced">
  <HintPath>C:/Users/Marco/Documents/FunCamp/Assets/Standard Assets/Scripts/GameData/Labourers/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>

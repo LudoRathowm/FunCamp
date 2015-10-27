@@ -32,8 +32,9 @@ public class DropOffCandyAction : GoapAction
 	
 	public override bool checkProceduralPrecondition (GameObject agent)
 	{
-
+	//	Debug.LogError("DOES THIS EVEN RUN");
 		CandyStash[] candystocker = (CandyStash[]) UnityEngine.GameObject.FindObjectsOfType ( typeof(CandyStash) );
+
 		CandyStash closest = null;
 		float closestDist = 0;
 		
@@ -41,12 +42,13 @@ public class DropOffCandyAction : GoapAction
 			if (closest == null) {
 
 				closest = supply;
+
 				closestDist = (supply.gameObject.transform.position - agent.transform.position).magnitude;
 			} else {
 
 				float dist = (supply.gameObject.transform.position - agent.transform.position).magnitude;
 				if (dist < closestDist) {
-				
+					Debug.LogError("closest2"+closest.gameObject);
 					closest = supply;
 					closestDist = dist;
 				}
@@ -64,7 +66,9 @@ public class DropOffCandyAction : GoapAction
 	public override bool perform (GameObject agent)
 	{
 		CandyBag backpack = (CandyBag)agent.GetComponent(typeof(CandyBag));
-		CandyStash.numCandy += backpack.numCandy;
+		if (backpack.numCandy == null) backpack.numCandy = 0;
+		target.GetComponent<CandyStash>().numCandy +=backpack.numCandy;
+		//CandyStash.numCandy += backpack.numCandy;
 		droppedOffCandy = true;
 		backpack.numCandy = 0;
 		

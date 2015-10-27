@@ -8,9 +8,10 @@ public class GetCandyAction : GoapAction
 	private CandyGiverComponent targetCandyGiver; //yum
 	
 	private float startTime = 0;
-	public float workDuration = 2; 
+	public float workDuration = 1; 
 	
 	public GetCandyAction () {
+		addPrecondition ("inPunishment", false); // first get spanked
 		addPrecondition ("hasCandy", false); // don't be a jew
 		addEffect ("hasCandy", true);
 	}
@@ -35,8 +36,8 @@ public class GetCandyAction : GoapAction
 	
 	public override bool checkProceduralPrecondition (GameObject agent)
 	{
-		// find the nearest chopping block that we can chop our wood at
-		CandyGiverComponent[] GenerousPeople = (CandyGiverComponent[]) UnityEngine.GameObject.FindObjectsOfType ( typeof(CandyGiverComponent) );
+
+		CandyGiverComponent[] GenerousPeople = (CandyGiverComponent[]) UnityEngine.GameObject.FindObjectsOfType ( typeof(CandyGiverComponent));
 		CandyGiverComponent closest = null;
 		float closestDist = 0;
 		
