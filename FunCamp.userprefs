@@ -1,20 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Scripts\GameData\Labourers\CandyLabourer.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Downloads\FunCamp-master\FunCamp-master\Assets\Standard Assets\Scripts\AI\GOAP\GoapAgent.cs">
     <Files>
-      <File FileName="Assets\Standard Assets\Scripts\AI\GOAP\IGoap.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\GameData\Actions\ConfiscateCandy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\GameData\Labourers\BibleThumper.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\GameData\Actions\Patrol.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\AI\GOAP\GoapAction.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\GameData\Actions\GetCandyAction.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\GameData\Actions\GetSpanked.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\GameData\Actions\DropOffCandyAction.cs" Line="38" Column="28" />
-      <File FileName="Assets\Standard Assets\Scripts\GameData\Labourers\CandyCollector.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\GameData\Labourers\CandyLabourer.cs" Line="40" Column="66" />
-      <File FileName="Assets\Standard Assets\Scripts\Component\CandyBag.cs" Line="1" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\AI\GOAP\GoapAgent.cs" Line="97" Column="1" />
-      <File FileName="Assets\Standard Assets\Scripts\AI\GOAP\GoapPlanner.cs" Line="1" Column="1" />
+      <File FileName="..\..\Downloads\FunCamp-master\FunCamp-master\Assets\Standard Assets\Scripts\AI\GOAP\GoapAgent.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

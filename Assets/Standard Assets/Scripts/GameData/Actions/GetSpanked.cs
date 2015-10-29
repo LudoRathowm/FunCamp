@@ -39,7 +39,8 @@ public class GetSpanked : GoapAction
 
 	
 	public override bool perform (GameObject agent)
-	{this.gameObject.GetComponent<CandyBag>().Spanked =false;
+	{
+		//this.gameObject.GetComponent<CandyBag>().Spanked =false;
 
 		if (startTime == 0)
 			startTime = Time.time;

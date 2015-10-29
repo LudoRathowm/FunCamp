@@ -9,6 +9,7 @@ public class DropOffCandyAction : GoapAction
 	
 	public DropOffCandyAction () {
 		addPrecondition ("hasCandy", true); 
+		addPrecondition ("inPunishment", false); // first get spanked
 		addEffect ("hasCandy", false); 
 		addEffect ("collectCandy", true); 
 	}

@@ -58,6 +58,15 @@ public sealed class GoapAgent : MonoBehaviour {
 	private bool hasActionPlan() {
 		return currentActions.Count > 0;
 	}
+	public void ResetActions(){
+		createIdleState();
+	}
+
+	public void ActuallyReset(){
+	
+		stateMachine.popState();
+		stateMachine.pushState(idleState);
+	}
 
 	private void createIdleState() {
 		idleState = (fsm, gameObj) => {
@@ -206,6 +215,7 @@ public sealed class GoapAgent : MonoBehaviour {
 
 	public static string prettyPrint(Queue<GoapAction> actions) {
 		String s = "";
+		if (actions != null)
 		foreach (GoapAction a in actions) {
 			s += a.GetType().Name;
 			s += "-> ";

@@ -68,7 +68,7 @@ public class GetCandyAction : GoapAction
 	}
 	
 	public override bool perform (GameObject agent)
-	{
+	{Debug.Log("GETCANDY");
 		if (startTime == 0)
 			startTime = Time.time;
 		

@@ -7,7 +7,7 @@ public class ConfiscateCandy : GoapAction
 	private CandyCollector targetKid;
 	
 	private float startTime = 0;
-	public float workDuration = 1; 
+	public float workDuration = 5; 
 	
 	public ConfiscateCandy () {
 	
@@ -70,8 +70,9 @@ public class ConfiscateCandy : GoapAction
 	
 	public override bool perform (GameObject agent)
 	{ target.GetComponent<CandyBag>().Spanked = true;
-		target.GetComponent<GetCandyAction>().reset();
-		target.GetComponent<DropOffCandyAction>().reset();
+		//target.GetComponent<GetCandyAction>().reset();
+		//target.GetComponent<DropOffCandyAction>().reset();
+		//target.GetComponent<GoapAgent>().ResetActions();
 	  
 		if (startTime == 0)
 			startTime = Time.time;

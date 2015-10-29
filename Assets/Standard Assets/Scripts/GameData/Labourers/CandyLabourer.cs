@@ -36,8 +36,17 @@ public abstract  class CandyLabourer : MonoBehaviour, IGoap
 	
 	public void Update () {
 		if (backpack.Spanked){
-		this.gameObject.GetComponent<GetCandyAction>().doReset();
-			this.gameObject.GetComponent<DropOffCandyAction>().doReset();}
+		//	
+		
+		//this.gameObject.GetComponent<GetCandyAction>().doReset();
+		//	this.gameObject.GetComponent<DropOffCandyAction>().doReset();
+
+			this.gameObject.GetComponent<GoapAgent>().ActuallyReset();
+
+
+
+
+		}
 	}
 	/**
 	 * Key-Value data that will feed the GOAP actions and system while planning.
@@ -48,7 +57,7 @@ public abstract  class CandyLabourer : MonoBehaviour, IGoap
 	//	Debug.LogError(backpack.Spanked);
 		worldData.Add(new KeyValuePair<string, object>("hasCandy", (backpack.numCandy > 0) ));
 		worldData.Add(new KeyValuePair<string, object>("inPunishment", (backpack.Spanked)));
-	
+			if (backpack.Spanked)	backpack.Spanked = false;
 		return worldData;
 	}
 	
@@ -114,7 +123,7 @@ public abstract  class CandyLabourer : MonoBehaviour, IGoap
 		if (Vector2.Distance(gameObject.transform.position, nextAction.target.transform.position) < 1f ) {
 //			Debug.Log ("ARRIVED");
 			path=null;
-
+			seeker.StartPath (transform.position, nextAction.target.transform.position, OnPathComplete);
 			currentWaypoint = 0;
 			imcalculatingthepathnigger = false;
 			//			Debug.Log("walao");
